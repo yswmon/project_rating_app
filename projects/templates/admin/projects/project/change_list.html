@@ -1,0 +1,15 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools %}
+  <div class="object-tools">
+    <ul class="object-tools">
+      <li>
+        <a href="?sort=average_desc" class="button">평균 점수순 정렬</a>
+      </li>
+      <li>
+        <a href="?sort=title" class="button">제목순 정렬</a>
+      </li>
+    </ul>
+  </div>
+  {{ block.super }}
+{% endblock %}

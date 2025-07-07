@@ -1,0 +1,171 @@
+body {
+    background: #181c24;
+    color: #f5f6fa;
+    font-family: 'Pretendard', 'Noto Sans KR', 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #4ea1f7;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #ffd700;
+}
+
+.header {
+    background: #232a34;
+    padding: 24px 0 16px 0;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffd700;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #232a34;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    padding: 32px 24px;
+}
+
+.project-card {
+    background: #232a34;
+    border: 1px solid #2d3440;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    padding: 20px 18px;
+    transition: box-shadow 0.2s;
+}
+.project-card:hover {
+    box-shadow: 0 4px 24px rgba(80, 80, 120, 0.18);
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffd700;
+    margin-bottom: 8px;
+}
+
+.project-desc {
+    color: #bfc4d1;
+    margin-bottom: 12px;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.meta-info {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+.vote-btn {
+    background: #4ea1f7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.vote-btn:hover {
+    background: #357ab8;
+}
+
+.score-badge {
+    background: #ffd700;
+    color: #232a34;
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+/* 네비게이션, 푸터 스타일 */
+.navbar {
+    background: #232a34;
+    padding: 0;
+    border-bottom: 1px solid #2d3440;
+}
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+}
+.nav-logo {
+    color: #ffd700;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.nav-links a {
+    color: #bfc4d1;
+    margin-left: 24px;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: #ffd700;
+}
+.footer {
+    background: #232a34;
+    color: #bfc4d1;
+    text-align: center;
+    padding: 18px 0 12px 0;
+    font-size: 0.95rem;
+    margin-top: 48px;
+}
+main {
+    min-height: 70vh;
+}
+
+/* 정렬 버튼 컨테이너 */
+.sort-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 auto 24px;
+    max-width: 700px;
+    justify-content: flex-start;
+    padding: 0 24px;
+}
+
+/* 정렬 버튼 스타일 */
+.sort-toggle-button {
+    background: #4ea1f7;
+    color: #fff;
+    border: 1px solid #357ab8;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+.sort-toggle-button:hover {
+    background: #357ab8;
+}
+.sort-toggle-button.active {
+    background: #2b5d94;
+    border-color: #244a75;
+}

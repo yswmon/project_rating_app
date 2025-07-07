@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}역할 선택{% endblock %}
+{% block content %}
+<div class="header">역할 선택</div>
+<div class="container" style="text-align:center;">
+    <form method="get" action="{% url 'project_list' %}">
+        <button type="submit" name="admin" value="1" class="vote-btn" style="margin: 0 12px;">🛡️ 관리자 모드</button>
+        <button type="submit" name="admin" value="0" class="vote-btn" style="margin: 0 12px; background:#232a34;color:#ffd700;border:1px solid #ffd700;">👤 사용자 모드</button>
+    </form>
+</div>
+{% endblock %}

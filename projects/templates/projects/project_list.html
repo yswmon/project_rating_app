@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}프로젝트 목록{% endblock %}
+{% block content %}
+<div class="header">프로젝트 평가</div>
+
+<div class="sort-buttons">
+    <a href="?sort=average" class="sort-toggle-button {% if request.GET.sort == 'average' %}active{% endif %}">
+        평균 점수순 정렬
+    </a>
+    <a href="?sort=title" class="sort-toggle-button {% if request.GET.sort == 'title' %}active{% endif %}">
+        제목순 정렬
+    </a>
+</div>
+
+<div class="container">
+    {% for project in projects %}
+        <div class="project-card">
+            <div class="project-title">{{ project.title }}</div>
+            <div class="project-desc">{{ project.description }}</div>
+
+            <div class="project-meta">
+                <div class="meta-info">
+                    평균 점수:
+                    <span class="score-badge">
+                        {{ project.average_score|default:"평가 없음" }}
+                    </span>
+                    | 누적 투표: {{ project.vote_set.count }}
+                </div>
+                <a href="{% url 'project_detail' project.pk %}" class="vote-btn">상세보기/투표</a>
+            </div>
+        </div>
+    {% empty %}
+        <div>등록된 프로젝트가 없습니다.</div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -12,7 +12,7 @@
             | 누적 투표: {{ project.vote_set.count }}
         </div>
     </div>
-    <form method="post" style="margin-top: 24px;">
+    <form method="post" action="{% url 'submit_vote' project.pk %}" style="margin-top: 24px;">
         {% csrf_token %}
         <label for="score">점수 선택:</label>
         <select name="score" id="score">
